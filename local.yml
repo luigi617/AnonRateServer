@@ -20,13 +20,13 @@ services:
     image: postgres
     restart: always
     volumes:
-      - local_postgres_data:/var/lib/postgresql/data
-      - local_postgres_data_backups:/backups
+      - anonrate_local_postgres:/var/lib/postgresql/data
+      - anonrate_local_postgres_backups:/backups
     ports: 
       - "5432:5432"
     env_file:
       - ./.envs/.local/.postgres
 
 volumes: 
-  local_postgres_data: {}
-  local_postgres_data_backups: {}
+  anonrate_local_postgres: {}
+  anonrate_local_postgres_backups: {}

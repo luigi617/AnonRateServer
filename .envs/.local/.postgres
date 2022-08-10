@@ -2,8 +2,8 @@
 # ------------------------------------------------------------------------------
 POSTGRES_HOST=postgres
 POSTGRES_PORT=5432
-POSTGRES_NAME=connectionbypixel
-POSTGRES_DB=connectionbypixel
-POSTGRES_USER=gdiutio4slhj453hjkfl3a
-POSTGRES_PASSWORD=fjhk9075234hjknguio15blhdf9sgy
+POSTGRES_NAME=anon_rate
+POSTGRES_DB=anon_rate
+POSTGRES_USER=urqeihnjxnvjkaldhgaui
+POSTGRES_PASSWORD=bnsjklhgaihuiqy384hgjkanga
 DATABASE=postgres

@@ -1,5 +1,5 @@
 """
-ASGI config for KnowledgExchange project.
+ASGI config for AnonRate project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

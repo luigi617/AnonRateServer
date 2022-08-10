@@ -25,8 +25,6 @@ LOCAL_APPS = [
 ]
 THIRD_PARTY_APPS = [
     'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
     "phonenumber_field",
     "rest_framework",
     "imagekit",
@@ -73,7 +71,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# https://docs.djangoproject.copostm/en/3.2/ref/settings/#databases
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -136,26 +134,13 @@ MEDIA_URL = '/front-end/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_MAX_DIGITS = 12
-DEFAULT_DECIMAL_PLACES = 2
 AUTH_USER_MODEL = "user.User"
 
 SITE_ID=1
 
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-LOGIN_REDIRECT_URL = '/'
-
-
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "limsevy@gmail.com"
-EMAIL_HOST_PASSWORD = "lgbqqrdinzvvvujn"
 
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 50
+    'PAGE_SIZE': 10000
 }
