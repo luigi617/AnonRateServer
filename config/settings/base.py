@@ -20,11 +20,10 @@ DJANGO_APPS = [
 ]
 
 LOCAL_APPS = [
-    "apps.home.apps.HomeConfig",
     "apps.user.apps.UserConfig",
 ]
 THIRD_PARTY_APPS = [
-    'allauth',
+
     "phonenumber_field",
     "rest_framework",
     "imagekit",
@@ -40,13 +39,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
-AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 ROOT_URLCONF = 'config.urls'
