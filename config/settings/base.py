@@ -21,9 +21,11 @@ DJANGO_APPS = [
 
 LOCAL_APPS = [
     "apps.user.apps.UserConfig",
+    "apps.rating.apps.RatingConfig",
+    "apps.comment.apps.CommentConfig",
+    "apps.post.apps.PostConfig",
 ]
 THIRD_PARTY_APPS = [
-
     "phonenumber_field",
     "rest_framework",
     "imagekit",
