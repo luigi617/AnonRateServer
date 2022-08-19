@@ -8,6 +8,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 APPS_DIR = str(ROOT_DIR) + "/apps/"
 
 
+
 DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -29,6 +30,8 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
     "rest_framework",
     "imagekit",
+    'oauth2_provider',
+    
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
@@ -135,6 +138,27 @@ SITE_ID=1
 
 
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10000
+    'PAGE_SIZE': 50
 }
+
+# PHONE_VERIFICATION = {
+#     "BACKEND": "config.phoneValidation.backends.twilio.TwilioBackend",
+#     "OPTIONS": {
+#         "SID": os.environ.get('PHONE_VERIFICATION_SID'),
+#         "SECRET": os.environ.get('PHONE_VERIFICATION_TOKEN'),
+#         "FROM": os.environ.get('PHONE_VERIFICATION_PHONE_NUMBER'),
+#         # "SANDBOX_TOKEN": os.environ.get('PHONE_VERIFICATION_TOKEN'),
+#     },
+#     "TOKEN_LENGTH": 6,
+#     "MESSAGE": "Welcome to {app}! Please use security code {security_code} to proceed.",
+#     "APP_NAME": "AnonRate",
+#     "SECURITY_CODE_EXPIRATION_TIME": 3600,  # In seconds only
+#     "VERIFY_SECURITY_CODE_ONLY_ONCE": False,  # If False, then a security code can be used multiple times for verification
+# }

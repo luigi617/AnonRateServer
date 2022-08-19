@@ -4,6 +4,9 @@ django-environ==0.8.1
 Pillow==9.1.0
 django-phonenumber-field[phonenumbers] #https://github.com/stefanfoulis/django-phonenumber-field
 
+django-oauth-toolkit==2.1.0
+twilio==7.12.1
+
 
 #rest framwork
 djangorestframework==3.13.1

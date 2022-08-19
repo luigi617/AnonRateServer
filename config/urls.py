@@ -20,11 +20,13 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
 
 urlpatterns += [
-    path('api/', include('rest_framework.urls')),
+    # path('api/', include('rest_framework.urls')),
     path('api/', include('apps.api.urls')),
+
 
 ]
 
